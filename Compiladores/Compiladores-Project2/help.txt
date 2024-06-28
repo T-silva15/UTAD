@@ -1,0 +1,16 @@
+Devemos guardar: (default)
+
+    estado da bateria (100)
+    localizacao atual (posto de carregamento)
+    numero de vezes que foi a manutencao (0)
+    lista de pecas e quantidade (0)
+
+so se deve deslocar para entrega se possuir o item
+
+so deve gastar bateria se for para uma linha diferente
+
+//comandos de teste
+
+RECOLHE([(cbv45,3),(12345,21)])
+ENTREGA(AB100,cbv45,1)
+ENTREGA(AB099,12345,21)

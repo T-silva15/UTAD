@@ -1,0 +1,2 @@
+RECOLHE([(A4gt6,0010),(atv55,9),(12H45,4)])
+ENTREGA(LM35,atv55,8)

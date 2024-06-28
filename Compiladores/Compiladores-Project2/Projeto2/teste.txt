@@ -1,0 +1,51 @@
+/* ######## Despoletar as ações correspondentes a cada uma das instruções, guardando e
+imprimindo, após cada instrução correta recebida, o estado atual do veículo ######## */
+
+RECOLHE([(A4gt6,30),(cbv45,3),(12345,21)])
+ENTREGA(LM035,A4gt6,30)
+ENTREGA(LM035,cbv45,3)
+ENTREGA(LM035,12345,21)
+CARREGA-BATERIA(1)
+ESTADO(I,M,B)
+MANUTENCAO(1)
+
+/* ######## Valida situações irregulares ######## */
+/* # Validar se o veículo recebe uma instrução que o leve a recolher uma quantidade que o faça
+exceder a sua capacidade. */
+
+RECOLHE([(A4gt6,30),(cbv45,30),(12345,21)])
+
+/* # Validar se o veículo recebe uma instrução que o leve a entregar um tipo de material ou uma
+quantidade que não está a transportar. */
+
+RECOLHE([(A4gt6,10),(atv55,100),(12H45,4)])
+ENTREGA(LM035,XXXXX,10)
+ENTREGA(LM035,A4gt6,20)
+
+/* # Validar se recebe uma instrução para a qual o estado da bateria não é suficiente. */
+
+ENTREGA(LM035,atv55,100)
+ENTREGA(LM036,12H45,4)
+
+/* # Validar se é pedido um carregamento quando a bateria está a 100%. */
+
+CARREGA-BATERIA(0)
+CARREGA-BATERIA(2)
+
+/* # Validaregerarumalertaseoveículoforchamadoàmanutençãomaisde3vezes. Se isso acontecer deverá
+colocar o contador a zero ou então lançar aviso com múltiplos de 3 idas. */
+
+MANUTENCAO(0)
+MANUTENCAO(1)
+MANUTENCAO(2)
+MANUTENCAO(0)
+MANUTENCAO(1)
+MANUTENCAO(2)
+/* 4. Imprimir o estado final do veículo (estado da bateria, localização final, lista e quantidade
+de peças de cada tipo que está a transportar, número de vezes que foi à manutenção) após terminada
+a análise do input (2 valores). */
+# Esta será para atingir o 20. Isto é terá que identificar (A4gt6,10) e (A4gt6,010). Ambos são
+valores inteiros > 0
+
+RECOLHE([(A4gt6,010),(atv55,009),(12H45,004)])
+ENTREGA(LM35,atv55,8)
