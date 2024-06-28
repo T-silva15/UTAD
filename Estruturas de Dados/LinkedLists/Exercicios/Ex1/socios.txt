@@ -1,0 +1,7 @@
+1;Nuno Bastos Freitas;-1
+3;Sofia Tavares Alves;-1
+5;Maria Freitas Esteves;-1
+6;Joao Fonseca Cunha;-1
+7;Maria Bastos Freitas;-1
+11;Cristina Freitas Tavares;-1
+18;Pedro Freitas Costa;-1
